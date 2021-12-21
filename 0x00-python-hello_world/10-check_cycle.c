@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 	if (list == NULL)
 		return (0);
 
-	while (l_flash && l_zoom && l_flash->next && l_zoom->next->next)
+	while (l_zoom && l_zoom->next && l_zoom->next->next)
 	{
 		l_flash = l_flash->next;
 		l_zoom = l_zoom->next->next;

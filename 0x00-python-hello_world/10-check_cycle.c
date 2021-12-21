@@ -9,7 +9,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *l_flash, *l_zoom;
 
-	*l_flash = *l_zoom = list;
+	l_flash = l_zoom = list;
 
 	if (list == NULL)
 		return (0);

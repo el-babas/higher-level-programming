@@ -4,16 +4,18 @@ class Square:
     """
     def __init__(self, size=0):
         """ Method - Initialize.
-        Parameters:
-        self -- this class
-        size -- size of the square
+
+        Args:
+            self (class): This class
+            size (int): Size of the square
         """
         self.size = size
 
     def area(self):
         """ Method - Returns the current square area.
-        Parameters:
-        self -- this class
+
+        Args:
+            self (class): This class
         """
         return (self.__size ** 2)
 

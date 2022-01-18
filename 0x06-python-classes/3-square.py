@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+""" Define an object name Square.
+"""
+
+
 class Square:
     """ Object Square [class]
     """
     def __init__(self, size=0):
         """ Method - Initialize.
-        Parameters:
-        self -- this class
-        size -- size of the square
+
+        Args:
+            self (class): This class
+            size (int): Size of the square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -17,7 +22,8 @@ class Square:
 
     def area(self):
         """ Method - Returns the current square area.
-        Parameters:
-        self -- this class
+
+        Args:
+            self (class): This class
         """
         return (self.__size ** 2)

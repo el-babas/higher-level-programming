@@ -1,25 +1,34 @@
 #!/usr/bin/python3
+""" Define an object name Square.
+"""
+
+
 class Square:
     """ Object Square [class]
     """
     def __init__(self, size=0, position=(0, 0)):
         """ Method - Initialize.
-        Parameters:
-        self -- this class
-        size -- size of the square
+
+        Args:
+            self (class): This class
+            size (int): Size of the square
         """
         self.size = size
         self.position = position
 
     def area(self):
         """ Method - Returns the current square area.
-        Parameters:
-        self -- this class
+
+        Args:
+            self (class): This class
         """
         return (self.__size ** 2)
 
     def my_print(self):
-        """ Method - prints in stdout the square with the character #
+        """ Method - prints in stdout the square with the character #.
+
+        Args:
+            self (class): This class
         """
         if self.__size:
             for i in range(self.position[1]):

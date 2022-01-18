@@ -2,6 +2,7 @@
 """Define an object name Square.
 """
 
+
 class Square:
     """Class Square empty.
     """

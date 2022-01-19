@@ -45,8 +45,16 @@ class Square:
         self.my_print()
         return ("")
         """
-        
-        return ("")
+        pstr = ""
+        if self.__size:
+            for i in range(self.position[1]):
+                pstr += "\n"
+            for j in range(self.size):
+                pstr += " " * self.position[0]
+                pstr += "#" * self.size
+                if j != (self.size - 1):
+                    pstr += "\n"
+        return (pstr)
 
     @property
     def size(self):

@@ -41,8 +41,11 @@ class Square:
 
     def __str__(self):
         """ Operator - [print] to a Square.
-        """
+
         self.my_print()
+        return ("")
+        """
+        
         return ("")
 
     @property

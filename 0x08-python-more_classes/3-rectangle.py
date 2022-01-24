@@ -23,7 +23,7 @@ class Rectangle:
             String content draw the rectangle (#)
         """
         drawn = ""
-        if self.height != 0 or self.width != 0:
+        if self.height != 0 and self.width != 0:
             for i in range(self.height):
                 drawn += ("#" * self.width) + "\n"
         return (drawn[:-1])

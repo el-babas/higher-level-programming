@@ -84,12 +84,6 @@ class Rectangle:
         else:
             return (rect_2)
 
-    @classmethod
-    def square(cls, size=0):
-        """ Method - Returns a new Rectangle instance with width == height == size
-        """
-        return (cls(size, size))
-
     @property
     def width(self):
         """ Get - instance attribute width
@@ -123,3 +117,11 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    @classmethod
+    def square(cls, size=0):
+        """Return a new Rectangle with width and height equal to size.
+        Args:
+            size (int): The width and height of the new Rectangle.
+        """
+        return (cls(size, size))

@@ -30,12 +30,11 @@ class Rectangle:
     def width(self, value):
         """ Set - instance attribute width
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -47,12 +46,11 @@ class Rectangle:
     def height(self, value):
         """ Set - instance attribute height
         """
-        if type(value) is not int:
+        if not isistance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
+        self.__height = value
 
     def area(self):
         """ Method - Calculate area.
@@ -82,8 +80,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
-        else:
-            return (rect_2)
+        return (rect_2)
 
     @classmethod
     def square(cls, size=0):

@@ -110,7 +110,9 @@ class Rectangle:
         Returns:
             String represantion the rectangle
         """
-        return ("Rectangle({:d}, {:d})".format(self.width, self.height))
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """ Method - Deleted rectangle

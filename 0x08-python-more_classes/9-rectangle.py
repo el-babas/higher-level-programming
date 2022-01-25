@@ -1,28 +1,24 @@
 #!/usr/bin/python3
-"""
-A module with a Rectangle that does nothing
+"""Define an objects.
 """
 
 
 class Rectangle:
-    """Represent a rectangle.
-    Attributes:
-        number_of_instances (int): The number of Rectangle instances.
-        print_symbol (any): The symbol used for string representation.
+    """Class Rectangle empty.
     """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """ Method - Initialize.
         Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
+            width (int): Width of the Rectangle
+            height (int): Height of the Rectangle
         """
-        type(self).number_of_instances += 1
-        self.width = width
         self.height = height
+        self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):

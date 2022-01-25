@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Define an objects.
+"""
+A module with a Rectangle that does nothing
 """
 
 
@@ -16,9 +17,9 @@ class Rectangle:
             width (int): Width of the Rectangle
             height (int): Height of the Rectangle
         """
+        type(self).number_of_instances += 1
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):

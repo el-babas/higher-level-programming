@@ -86,15 +86,16 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """ Method - Create new instance of Rectangle class
+        """ Method - New instance of Rectangle class.
 
         Args:
-            cls (Rectangle): New instance of Rectangle
-            size (int): Width and Height rectangle
-
+            cls: Rectangle class
+            size: Width and height to the rectangle
+            
         Returns:
-            New instance of Rectangle class
+            A new instance of Rectangle class
         """
+
         return cls(size, size)
 
     @property

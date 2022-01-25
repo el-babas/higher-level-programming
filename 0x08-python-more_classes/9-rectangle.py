@@ -91,7 +91,7 @@ class Rectangle:
         Args:
             cls: Rectangle class
             size: Width and height to the rectangle
-            
+
         Returns:
             A new instance of Rectangle class
         """

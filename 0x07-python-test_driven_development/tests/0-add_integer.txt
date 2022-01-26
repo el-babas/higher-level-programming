@@ -1,0 +1,52 @@
+===========================
+File the 0-add_integer.py
+===========================
+
+Using add_integer
+=================
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Simple tests
+
+	>>> add_integer(4, 3)
+	7
+
+	>>> add_integer(4, -3)
+	1
+
+	>>> add_integer(-4, 3)
+	-1
+
+	>>> add_integer(2.5, 1.6)
+	3
+
+	>>> add_integer(2.5)
+	100
+
+Error tests
+
+	>>> add_integer("hello", 2)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(2, "hello")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer("hello", "world")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(456, [])
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer

@@ -1,0 +1,37 @@
+===========================
+File the 0-add_integer.py
+===========================
+
+Using 2-matrix_divided.py
+=================
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Simple tests
+
+	>>> matrix_divided([[6, 5, 4], [9, 8, 7]], 3)
+	[[2.0, 1.67, 1.33], [3.0, 2.67, 2.33]]
+
+	>>> matrix_divided([[10, 20, 30], [-40.50, -50.60, 0]], -10)
+	[[-1.0, -2.0, -3.0], [4.05, 5.06, -0.0]]
+
+Error tests
+	>>> matrix_divided([[6, 5, 4], [9, 8, 7]], 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+	>>> matrix_divided((6, 5, 4), 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[6, 5, 4], [9, 8, 7]], "3")
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[2, 4], [6.4], [25, 40]], 5)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrix must have the same size

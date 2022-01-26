@@ -1,0 +1,59 @@
+===========================
+File the 5-text_indentation.py
+===========================
+
+Using text_indentation
+=================
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Simple tests
+
+	>>> text_indentation("No line break")
+	No line break
+
+	>>> text_indentation("    No line break.")
+	No line break.
+        <BLANKLINE>
+
+	>>> text_indentation("No line break      ")
+	No line break
+
+	>>> text_indentation("     No line break      ")
+	No line break
+
+	>>> text_indentation("          ")
+
+
+	>>> text_indentation("Cristhian:\nApaza.")
+	Cristhian:
+	<BLANKLINE>
+	<BLANKLINE>
+	Apaza.
+	<BLANKLINE>
+	
+	>>> text_indentation("One line \nTwo line.")
+	One line 
+	Two line.
+	<BLANKLINE>
+
+	>>> text_indentation("Cristhian "
+	... "Jose. Apaza "
+	... "Arhuata: 72809924") # doctest: +NORMALIZE_WHITESPACE
+	Cristhian Jose.
+	<BLANKLINE>
+	Apaza Arhuata:
+	<BLANKLINE>
+	72809924
+
+Error tests
+	
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation(1)	
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string

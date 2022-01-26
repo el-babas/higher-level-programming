@@ -1,0 +1,29 @@
+===========================
+File the 101-lazy_matrix_mul.py
+===========================
+
+Using lazy_matrix_mul
+=================
+
+	>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Simple tests
+	
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+	array([[19, 22],
+	       [43, 50]])
+
+	>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+	array([[13, 16]])
+
+Error tests
+	
+	>>> lazy_matrix_mul(None, None)
+	Traceback (most recent call last):
+	...
+	TypeError: Object arrays are not currently supported
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], "Hello")
+	Traceback (most recent call last):
+	...
+	ValueError: Scalar operands are not allowed, use '*' instead

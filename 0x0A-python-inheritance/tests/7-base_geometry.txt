@@ -1,0 +1,87 @@
+==================
+File 1-my_list.py
+==================
+
+Class BaseGeometry
+==================
+
+Import class BaseGeometry
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Simple tests
+
+T0
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", 1)
+
+Error tests
+
+E0
+    >>> test = BaseGeometry()
+    >>> test.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+E1
+    >>> test = BaseGeometry()
+    >>> test.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+E2
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", "1")
+    Traceback (most recent call last):
+    ...
+    TypeError: number must be an integer
+
+E3
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", False)
+    Traceback (most recent call last):
+    ...
+    TypeError: number must be an integer
+
+E4
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+E5
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: number must be greater than 0
+
+E6
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: number must be greater than 0
+
+E7
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: number must be an integer
+
+E8
+    >>> test = BaseGeometry()
+    >>> test.integer_validator("number", 1, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+E9
+    >>> test = BaseGeometry()
+    >>> test.area(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given

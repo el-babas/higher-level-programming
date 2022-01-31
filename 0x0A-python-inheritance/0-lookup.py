@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Functions:
-        lookup
+        a) lookup
 """
 
 

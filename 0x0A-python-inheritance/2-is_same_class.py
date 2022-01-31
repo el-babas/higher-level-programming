@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Functions:
-       is_same_class
+       a) is_same_class
 """
 
 

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Functions:
         a) class_to_json
 """

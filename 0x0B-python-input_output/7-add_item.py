@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import sys
-import os
 """ Script that adds all arguments to a Python list,
     and then save them to a file
 """
+import sys
+import os
 
 
 fs_json = __import__('5-save_to_json_file').save_to_json_file

@@ -1,0 +1,4 @@
+#!/bin/bash
+#chmod u+x -R *.py
+chmod u+x *.py ./models/*.py #./tests/*.py
+pycodestyle *.py ./models/*.py #./tests/*.py

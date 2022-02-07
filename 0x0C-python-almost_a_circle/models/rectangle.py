@@ -122,6 +122,18 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """ Method - Generate dictionary representation Rectangle.
+
+        Returns:
+            The dictionary representation of a Rectangle.
+            self.__dict__ custom
+        """
+        dict_rect = {"id": 0, "width": 0, "height": 0, "x": 0, "y": 0}
+        for key in dict_rect.keys():
+            dict_rect[key] = getattr(self, key)
+        return (dict_rect)
+
     def __str__(self):
         """ Method (custom): Get format string for the Rectangle.
 

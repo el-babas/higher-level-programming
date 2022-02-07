@@ -2,6 +2,8 @@
 ##*
 ##!/**/
 ##!*.*
+*.json
+*.csv
 
 #ignore directory.
 /.vscode/

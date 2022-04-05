@@ -11,8 +11,7 @@ class Rectangle {
     }
   }
 
-  print () {
-    const simbol = 'X';
+  print (simbol = 'X') {
     for (let i = 0; i < this.height; i++) {
       console.log(simbol.repeat(this.width));
     }

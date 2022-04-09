@@ -34,7 +34,7 @@ if __name__ == '__main__':
     db_cursor = db_connection.cursor()
     query = '''
     SELECT * FROM states
-    WHERE name = "{}" ORDER BY id;
+    WHERE BINARY name = "{}" ORDER BY id;
     '''.format(sys.argv[4])
     db_cursor.execute(query)
 

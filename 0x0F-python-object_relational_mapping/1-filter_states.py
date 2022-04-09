@@ -32,10 +32,10 @@ def mysqlconnect(username, password, database, port=3306):
 if __name__ == '__main__':
     db_connection = mysqlconnect(sys.argv[1], sys.argv[2], sys.argv[3])
     db_cursor = db_connection.cursor()
-    query = 'SELECT * FROM states WHERE name LIKE "N%" ORDER BY id ASC'
+    query = 'SELECT * FROM states WHERE name LIKE BINARY "N%" ORDER BY id ASC'
     db_cursor.execute(query)
-    states = db_cursor.fetchall()
 
+    states = db_cursor.fetchall()
     for state in states:
         print(state)
 

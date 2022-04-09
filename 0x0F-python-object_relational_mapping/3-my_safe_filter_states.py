@@ -34,7 +34,7 @@ if __name__ == '__main__':
     db_cursor = db_connection.cursor()
     db_cursor.execute('''
     SELECT * FROM states
-    WHERE name = %(filter1)s" ORDER BY id;
+    WHERE name = %(filter1)s ORDER BY id;
     ''', {'filter1': sys.argv[4]})
 
     states = db_cursor.fetchall()

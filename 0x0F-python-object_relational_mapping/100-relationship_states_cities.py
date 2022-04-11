@@ -37,10 +37,8 @@ def mysqlconnect(username, password, database, port=3306):
 if __name__ == '__main__':
     bd_session = mysqlconnect(sys.argv[1], sys.argv[2], sys.argv[3])
 
-    new_state = State(name='California')
-    new_city = City(name='San Francisco')
-    new_state.cities.append(new_city)
-
+    new_state = State(name="California")
+    new_state.cities = [City(name="San Francisco")]
     bd_session.add(new_state)
-    bd_session.add(new_city)
     bd_session.commit()
+    bd_session.close()

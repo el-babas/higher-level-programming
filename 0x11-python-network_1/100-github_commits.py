@@ -26,7 +26,7 @@ def getCommitsGitHub(repository, ownername):
     # print(myjson)
     for i in range(0, 10):
         print("{}: {}".format(
-            myjson[i].get('sha'),
+            myjson[i].get("sha"),
             myjson[i].get("commit").get("author").get("name")
         ))
 

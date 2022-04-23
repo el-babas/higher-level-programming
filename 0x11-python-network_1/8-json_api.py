@@ -33,7 +33,7 @@ def POSTrequestJson(pagename, values, head=None):
 
 
 if __name__ == '__main__':
-    url = argv[1]
+    url = 'http://0.0.0.0:5000/search_user'
     values = {'q': ''}
     if len(argv) >= 2:
         values['q'] = argv[1]

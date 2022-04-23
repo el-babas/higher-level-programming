@@ -20,7 +20,7 @@ def getvalueheaders(pagename, key):
     """
     myrequest = requests.get(pagename)
     myheaders = myrequest.headers
-    print(myheaders[key])
+    print(myheaders.get(key))
 
 
 if __name__ == '__main__':

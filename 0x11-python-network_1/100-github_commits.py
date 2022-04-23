@@ -17,17 +17,18 @@ def getCommitsGitHub(repository, ownername):
         repository (str): GitHub repository name.
         ownername (str): GitHub owner name.
     """
-    api = 'https://api.github.com/repos/{}/{}/commits'.format(
+    api = 'https://api.github.com/repos/{}/{}/commits?per_page={}'.format(
                                                                 ownername,
-                                                                repository
+                                                                repository,
+                                                                10
                                                             )
     myrequest = requests.get(api)
     myjson = myrequest.json()
     # print(myjson)
-    for i in range(0, 10):
+    for commit in myjson:
         print("{}: {}".format(
-            myjson[i].get("sha"),
-            myjson[i].get("commit").get("author").get("name")
+            commit.get("sha"),
+            commit.get("commit").get("author").get("name")
         ))
 
 

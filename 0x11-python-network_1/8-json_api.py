@@ -27,9 +27,9 @@ def POSTrequestJson(pagename, values, head=None):
         if not myjson:
             return ("No result")
         else:
-            print("[{}] {}".format(myjson.get('id'), myjson.get('name')))
+            return ("[{}] {}".format(myjson.get('id'), myjson.get('name')))
     except BaseException:
-        print("Not a valid JSON")
+        return ("Not a valid JSON")
 
 
 if __name__ == '__main__':

@@ -11,11 +11,11 @@ def mystatus(pagename):
     """
     with urllib.request.urlopen(pagename) as response:
         html = response.read()
-        result = '''Body response:
-        \t- type: {}
-        \t- content: {}
-        \t- utf8 content: {}'''.format(type(html), html, html.decode('utf-8'))
-        print(result)
+        # Info! Print report status.
+        print("Body response:")
+        print("\t- type:", type(html))
+        print("\t- content:", html)
+        print("\t- utf8 content:", html.decode("utf-8"))
 
 
 if __name__ == '__main__':

@@ -13,15 +13,15 @@ axios.get(api)
     // handle success
     let count = 0;
     const films = response.data.results;
-    films.forEach(function (element) {
-      if (element.characters.includes(idCharacter)) count++;
-    });
+    for (let i = 0; i < films.length; i++) {
+      const characters = films[i].characters;
+      if (characters.includes(idCharacter)) {
+        count += 1;
+      }
+    }
     console.log(count);
   })
   .catch((error) => {
     // handle error
     console.log(error.message);
-  })
-  .then(function () {
-    // always executed
   });

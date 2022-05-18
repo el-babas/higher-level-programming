@@ -1,8 +1,6 @@
 #!/usr/bin/node
 const axios = require('axios').default;
 
-// ID Wedge Antilles = 18.
-const idCharacter = 'https://swapi-api.hbtn.io/api/people/18/';
 // https://swapi-api.hbtn.io/api/films/
 const api = process.argv[2];
 /**
@@ -13,12 +11,12 @@ axios.get(api, {
   // handle success
   let count = 0;
   const films = response.data.results;
-  for (let i = 0; i < films.length; i++) {
-    const characters = films[i].characters;
-    if (characters.includes(idCharacter)) {
-      count += 1;
-    }
-  }
+  films.forEach(res => {
+    res.characters.forEach(char => {
+      // ID Wedge Antilles = 18.
+      if (char.includes('18')) count++;
+    });
+  });
   console.log(count);
 }).catch((error) => {
   // handle error
